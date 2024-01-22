@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('check'){
             steps{
-                sh 'docker --version'
+                sh 'docker build -t docker/getting-started .'
             }
         }
     }
