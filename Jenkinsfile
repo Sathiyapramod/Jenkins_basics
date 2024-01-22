@@ -1,11 +1,19 @@
 pipeline {
-    agent {
-        docker { image 'node:20.11.0-alpine3.19' }
-    }
+    ageny any 
     stages {
-        stage('Test') {
+        stage('initial') {
             steps {
-                sh 'node --version'
+                echo 'initial stage'
+            }
+        }
+        stage('processing'){
+            steps {
+                echo 'processing'
+            }
+        }
+        stage('build'){
+            steps {
+                echo 'build'
             }
         }
     }
