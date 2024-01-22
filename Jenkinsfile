@@ -1,19 +1,19 @@
 pipeline {
-    ageny any 
+    agent any 
     stages {
-        stage('initial') {
+        stage('Build') { 
             steps {
-                echo 'initial stage'
+                echo 'Build.,!'
             }
         }
-        stage('processing'){
+        stage('Test') { 
             steps {
-                echo 'processing'
+                echo 'Test.,!'
             }
         }
-        stage('build'){
+        stage('Deploy') { 
             steps {
-                echo 'build'
+                echo 'Deploy.,!' 
             }
         }
     }
