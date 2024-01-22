@@ -5,17 +5,17 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                echo 'Build.,!'
+                echo 'docker info'
             }
         }
         stage('Test') { 
             steps {
-                echo 'Test.,!'
+                echo 'docker info'
             }
         }
         stage('Deploy') { 
             steps {
-                echo 'Deploy.,!' 
+               echo 'docker info'
             }
         }
     }
