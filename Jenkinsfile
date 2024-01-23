@@ -4,10 +4,12 @@ pipeline {
     stage('Display List of agents') {
      steps {
        script {
-         def agentsList = Jenkins.instance.getNodes().collect {
-           it.getDisplayName()
-         }
-         echo "List of Agents: ${agentsList.join(', ')}"
+         def agents = []
+         for (node in Jenkins.instance.nodes) {
+              agents.add(node.getDisplayName())
+           }
+                    
+         echo "List of Agents: ${agents.join(', ')}"
        }
      }
     }
