@@ -1,15 +1,15 @@
 pipeline {
-  agent {
-    docker {
-      image 'docker/getting-started'
-    }
-  }
+  agent none 
   stages {
-    stage('Build'){
+    stage('Creating-new-agent'){
+      agent {
+        docker {
+          image 'docker/getting-started:latest'
+          
+        }
+      }
       steps {
-        echo 'Building the image'
-        sh 'docker --version'
-        // sh 'docker run -d -p 80:80 docker/getting-started'
+        echo 'Running new agent. !!'
       }
     }
   }
