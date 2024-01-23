@@ -7,7 +7,10 @@ pipeline {
   }
   stages {
     stage('Build'){
-      sh 'docker run -d -p 80:80 docker/getting-started'
+      steps {
+        echo 'Building the image'
+        sh 'docker run -d -p 80:80 docker/getting-started'
+      }
     }
   }
 }
