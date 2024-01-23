@@ -7,8 +7,6 @@ pipeline {
   }
   stages {
     stage('Build'){
-      echo 'Hello World.,!'
-      echo 'Building Docker Image'
       sh 'docker run -d -p 80:80 docker/getting-started'
     }
   }
