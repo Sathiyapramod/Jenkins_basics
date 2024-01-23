@@ -1,15 +1,11 @@
 pipeline {
-  agent none 
+  agent any 
   stages {
-    stage('Creating-new-agent'){
-      agent {
-        docker {
-          image 'docker/getting-started:latest'
-          
-        }
-      }
+    stage('Build'){
       steps {
-        echo 'Running new agent. !!'
+        echo 'Hello World.,!'
+        sh 'docker pull docker/getting-started:latest'
+        sh 'docker run -d -p 80:80 docker/getting-started'
       }
     }
   }
